@@ -13,6 +13,15 @@ namespace Bqrd\OpenApi\Api;
 
 class Statistic extends BaseApi
 {
+    /**
+     * getAbout 
+     * 
+     * @param mixed $date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getAbout($date)
     {
         $url = ApiUrl::STATISTIC_ABOUT;
@@ -24,6 +33,15 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getVisitDaily 
+     * 
+     * @param mixed $date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getVisitDaily($date)
     {
         $url = ApiUrl::STATISTIC_VISIT_DAILY;
@@ -35,6 +53,16 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getVisitWeekly 
+     * 
+     * @param mixed $begin_date 
+     * @param mixed $end_date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getVisitWeekly($begin_date, $end_date)
     {
         $url = ApiUrl::STATISTIC_VISIT_WEEKLY;
@@ -46,6 +74,16 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getVisitMonthly 
+     * 
+     * @param mixed $begin_date 
+     * @param mixed $end_date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getVisitMonthly($begin_date, $end_date)
     {
         $url = ApiUrl::STATISTIC_VISIT_MONTHLY;
@@ -57,6 +95,15 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getDistribution 
+     * 
+     * @param mixed $date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getDistribution($date)
     {
         $url = ApiUrl::STATISTIC_VISIT_DISTRIBUTION;
@@ -68,6 +115,15 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getRetainDaily 
+     * 
+     * @param mixed $date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getRetainDaily($date)
     {
         $url = ApiUrl::STATISTIC_VISIT_RETAIN_DAILY;
@@ -79,6 +135,16 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getRetainWeekly 
+     * 
+     * @param mixed $begin_date 
+     * @param mixed $end_date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getRetainWeekly($begin_date, $end_date)
     {
         $url = ApiUrl::STATISTIC_VISIT_RETAIN_WEEKLY;
@@ -90,6 +156,16 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getRetainMonthly 
+     * 
+     * @param mixed $begin_date 
+     * @param mixed $end_date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getRetainMonthly($begin_date, $end_date)
     {
         $url = ApiUrl::STATISTIC_VISIT_RETAIN_WEEKLY;
@@ -101,6 +177,15 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getPage 
+     * 
+     * @param mixed $date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getPage($date)
     {
         $url = ApiUrl::STATISTIC_VISIT_PAGE;
@@ -112,6 +197,16 @@ class Statistic extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getUserFeature 
+     * 
+     * @param mixed $begin_date 
+     * @param mixed $end_date 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getUserFeature($begin_date, $end_date)
     {
         $url = ApiUrl::STATISTIC_VISIT_USERS_FEATURE;
