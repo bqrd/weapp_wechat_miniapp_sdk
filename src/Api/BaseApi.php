@@ -15,15 +15,45 @@ use Cache;
 
 class BaseApi
 {
+    /**
+     * appid 
+     * 
+     * @var mixed
+     * @access protected
+     */
     protected $appid;
+    /**
+     * secret 
+     * 
+     * @var mixed
+     * @access protected
+     */
     protected $secret;
 
+    /**
+     * __construct 
+     * 
+     * @param mixed $appid 
+     * @param mixed $secret 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function __construct($appid, $secret)
     {
         $this->appid = $appid;
         $this->secret = $secret;
     }
 
+    /**
+     * getAccessToken 
+     * 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getAccessToken()
     {
         $token = Cache::get($this->appid.'_token', false);
@@ -47,6 +77,17 @@ class BaseApi
         return $res['access_token'];
     }
 
+    /**
+     * sendRequestWithToken 
+     * 
+     * @param mixed $url 
+     * @param mixed $body_param 
+     * @param mixed $is_post 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function sendRequestWithToken($url, $body_param = null, $is_post = true)
     {
         $token = array(
@@ -76,6 +117,8 @@ class BaseApi
         }
         $ch = curl_init($url.$url_param);
         curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, 'CURLOPT_CONNECTTIMEOUT', 10)
+        curl_setopt($ch, 'CURLOPT_TIMEOUT', 60)
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($is_post) {
             curl_setopt($ch, CURLOPT_POST, 1);

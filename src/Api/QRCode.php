@@ -13,6 +13,18 @@ namespace Bqrd\OpenApi\Api;
 
 class QRCode extends BaseApi
 {
+    /**
+     * getQRCodeA 
+     * 
+     * @param mixed $path 
+     * @param mixed $width 
+     * @param mixed $auto_color 
+     * @param mixed $line_color 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getQRCodeA($path, $width = null, $auto_color = null, $line_color = null)
     {
         $url = ApiUrl::GET_APP_CODE_A;
@@ -26,6 +38,19 @@ class QRCode extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getQRCodeB 
+     * 
+     * @param mixed $scene 
+     * @param mixed $page 
+     * @param mixed $width 
+     * @param mixed $auto_color 
+     * @param mixed $line_color 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getQRCodeB($scene, $page, $width = null, $auto_color = null, $line_color = null)
     {
         $url = ApiUrl::GET_APP_CODE_B;
@@ -40,6 +65,16 @@ class QRCode extends BaseApi
         return $this->sendRequestWithToken($url, $param);
     }
 
+    /**
+     * getQRCodeC 
+     * 
+     * @param mixed $path 
+     * @param mixed $width 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function getQRCodeC($path, $width = null)
     {
         $url = ApiUrl::GET_QR_CODE_C;

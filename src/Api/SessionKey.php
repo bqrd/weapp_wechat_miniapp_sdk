@@ -13,6 +13,15 @@ namespace Bqrd\OpenApi\Api;
 
 class SessionKey extends BaseApi
 {
+    /**
+     * 使用code 换取 openid 和 session_key
+     * 
+     * @param mixed $code 
+     * 
+     * @access public
+     * 
+     * @return mixed
+     */
     public function get($code)
     {
         $url = ApiUrl::SESSION_KEY;
@@ -23,6 +32,6 @@ class SessionKey extends BaseApi
 			'grant_type' => 'authorization_code',
 		);
 
-        return file_get_contents($url.'?'.http_build_query($param));
+        return $this->sendHttpRequest($url, $param, null, false);
     }
 }
