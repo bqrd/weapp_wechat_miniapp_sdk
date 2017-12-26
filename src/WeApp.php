@@ -6,15 +6,15 @@
  * Time: 10:04
  */
 
-namespace JiaweiXS\WeApp;
+namespace Bqrd\OpenApi;
 
 
-use JiaweiXS\WeApp\Api\CustomMsg;
-use JiaweiXS\WeApp\Api\QRCode;
-use JiaweiXS\WeApp\Api\SessionKey;
-use JiaweiXS\WeApp\Api\Statistic;
-use JiaweiXS\WeApp\Api\TemplateMsg;
-use JiaweiXS\SimpleCache;
+use Bqrd\OpenApi\Api\CustomMsg;
+use Bqrd\OpenApi\Api\QRCode;
+use Bqrd\OpenApi\Api\SessionKey;
+use Bqrd\OpenApi\Api\Statistic;
+use Bqrd\OpenApi\Api\TemplateMsg;
+use Cache;
 
 class WeApp
 {
@@ -22,11 +22,10 @@ class WeApp
 	private $secret;
 	private $instance;
 
-	public function __construct($appid,$secret,$token_cache_dir){
+	public function __construct($appid,$secret){
 		$this->appid = $appid;
 		$this->secret = $secret;
 		$this->instance = [];
-		SimpleCache::init($token_cache_dir);
 	}
 
 	/**

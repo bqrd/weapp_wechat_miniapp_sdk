@@ -6,7 +6,7 @@
  * Time: 20:53
  */
 
-namespace JiaweiXS\WeApp\Api;
+namespace Bqrd\OpenApi\Api;
 
 
 class Statistic extends BaseApi

@@ -6,7 +6,7 @@
  * Time: 18:51
  */
 
-namespace JiaweiXS\WeApp\Api;
+namespace Bqrd\OpenApi\Api;
 
 
 class WeAppException extends \Exception

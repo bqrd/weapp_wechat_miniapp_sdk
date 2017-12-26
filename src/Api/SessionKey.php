@@ -6,7 +6,7 @@
  * Time: 11:16
  */
 
-namespace JiaweiXS\WeApp\Api;
+namespace Bqrd\OpenApi\Api;
 
 
 class SessionKey extends BaseApi

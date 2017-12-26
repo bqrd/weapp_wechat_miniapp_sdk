@@ -6,10 +6,10 @@
  * Time: 17:39
  */
 
-namespace JiaweiXS\WeApp\Api;
+namespace Bqrd\OpenApi\Api;
 
 
-use JiaweiXS\SimpleCache;
+use Cache;
 
 class BaseApi
 {
@@ -23,7 +23,7 @@ class BaseApi
 	}
 
 	public function getAccessToken(){
-		$token = SimpleCache::get($this->appid.'_token',false);
+		$token = Cache::get($this->appid.'_token',false);
 		if($token){
 			return $token;
 		}
@@ -39,7 +39,7 @@ class BaseApi
 			throw new WeAppException($res['errcode'].':'.$res['errmsg'],$res['errcode']);
 		}
 
-		SimpleCache::set($this->appid.'_token',$res['access_token'],$res['expires_in']-200);
+		Cache::put($this->appid.'_token',$res['access_token'],$res['expires_in']-200);
 		return $res['access_token'];
 	}
 

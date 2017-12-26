@@ -6,7 +6,7 @@
  * Time: 13:54
  */
 
-namespace JiaweiXS\WeApp\Api;
+namespace Bqrd\OpenApi\Api;
 
 
 class TemplateMsg extends BaseApi

@@ -1,35 +1,20 @@
 ## 安装
 ```
 //install by composer
-composer require jiaweixs/weapp
+composer require bqrd/weapp
   
 //or clone from github
-git clone git@github.com:kulokai/weapp.git
+git clone git@github.com:bqrd/weapp_wechat_miniapp_sdk.git
 ```
 
 ## 用法
-#### 1. 创建小程序对象
-```php
-use JiaweiXS\WeApp\WeApp;
-  
-//创建一个小程序对象
-$weapp = new WeApp('appid','secret','.../缓存的路径/');
-  
-//例如，在laravel,文件缓存路径为'../storage/cache/'
-$weapp = new WeApp('wxc123...','123456...','../storage/cache/');
-```
-#### 2. 通过客户端上传的code换取sessionkey
+#### 1. 通过客户端上传的code换取sessionkey
 ```php
 //code 换取 session_key
 $weapp->getSessionKey($code);
 ```
-#### 3. 微信支付SDK推荐
-[wxpay/WXPay-SDK-PHP](https://github.com/wxpay/WXPay-SDK-PHP) (微信支付官方SDK)
-```php
-composer require "wxpay/wxpay:0.0.5" -vvv
-```
-#### 4. 其他接口的调用
-4.1 模板消息相关接口
+#### 2. 其他接口的调用
+2.1 模板消息相关接口
 ```php
 //从‘小程序’获取一个‘模板消息’单例对象
 $templateMsg = $weapp.getTemplateMsg();
@@ -53,7 +38,7 @@ $res_array = $templateMsg->del($template_id);
 $res_array = $templateMsg->send($touser,$template_id,$form_id,$data);
   
 ```
-4.2.1 客服消息相关接口
+2.2.1 客服消息相关接口
 ```php
 //从‘小程序’获取一个‘客服消息’单例对象
 $customMsg = $weapp.getCustomMsg();
@@ -62,13 +47,13 @@ $customMsg = $weapp.getCustomMsg();
 $res_array = $customMsg->send($touser,$msgtype,$content_array);
   
 ```
-4.2.2 客服消息更新计划：
+2.2.2 客服消息更新计划：
 - [ ] 实现接收客户消息和事件并解密
 - [ ] 实现新增临时素材
 - [ ] 实现获取临时素材
 - [ ] 转发消息
   
-4.3 二维码相关接口
+2.3 二维码相关接口
 ```php
 //从‘小程序’获取一个‘二维码’单例对象
 $qrcode = $weapp.getQRCode();
@@ -84,7 +69,7 @@ $res_array = $qrcode->getQRCodeC($path,$width=null);
   
 //注意数量限制 A码+C码：总共10万个 B码：无数量限制
 ```
-4.4 数据统计相关接口
+2.4 数据统计相关接口
 ```php
 //从‘小程序’获取一个‘数据统计’单例对象
 $statistic = $weapp.getStatistic();
@@ -123,5 +108,5 @@ $res_array = $statistic->getUserFeature($date);
 ## 参考文档
 1. 微信小程序文档 https://mp.weixin.qq.com/debug/wxadoc/dev/api/
 
-## 关于
-如果有遇到什么问题，欢迎来邮。 kurobafear@hotmail.com
+## 致谢
+[kulokai/weapp_wechat_miniapp_sdk](https://github.com/kulokai/weapp_wechat_miniapp_sdk)
