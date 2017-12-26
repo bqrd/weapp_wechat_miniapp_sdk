@@ -1,9 +1,18 @@
 <?php
+
+/*
+ * This file is part of the bqrd weapp package.
+ *
+ * (c) qinjb <qinjb@boqii.com> liugj <liugj@boqii.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Bqrd\OpenApi\Api;
 
 class ApiUrl
 {
-
     //get session_key and access_token by appid and secret
     const SESSION_KEY = 'https://api.weixin.qq.com/sns/jscode2session';
     const ACCESS_TOKEN = 'https://api.weixin.qq.com/cgi-bin/token';

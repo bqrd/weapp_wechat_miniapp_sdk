@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the boqii openapi search client package.
+ * This file is part of the bqrd weapp package.
  *
  * (c) qinjb <qinjb@boqii.com> liugj <liugj@boqii.com>
  *

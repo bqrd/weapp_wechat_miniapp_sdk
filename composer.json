@@ -10,7 +10,9 @@
     }
   ],
   "require": {
-    "php": "^5.5.9 || ^7.0"
+      "php": ">=7.0",
+      "friendsofphp/php-cs-fixer": "^2.3",
+      "sllh/php-cs-fixer-styleci-bridge": "dev-master"
   },
 
   "autoload": {
