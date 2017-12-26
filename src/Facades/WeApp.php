@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Facade;
 class WeApp extends Facade
 {
     /**
-     * getFacadeAccessor.
+     * GetFacadeAccessor.
      *
      * @static
      *
