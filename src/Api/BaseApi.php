@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jiawei
- * Date: 2017/7/29
- * Time: 17:39
- */
-
 namespace Bqrd\OpenApi\Api;
 
 
