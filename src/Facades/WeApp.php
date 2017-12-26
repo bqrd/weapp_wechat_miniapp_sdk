@@ -12,7 +12,6 @@
 namespace Bqrd\OpenApi\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Bqrd\OpenApi\WeApp as OpenApiWeApp;
 
 class WeApp extends Facade
 {
@@ -25,6 +24,6 @@ class WeApp extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return OpenApiWeApp::class;
+        return \Bqrd\OpenApi\WeApp::class;
     }
 }
