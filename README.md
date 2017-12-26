@@ -17,7 +17,7 @@ $weapp->getSessionKey($code);
 2.1 模板消息相关接口
 ```php
 //从‘小程序’获取一个‘模板消息’单例对象
-$templateMsg = $weapp.getTemplateMsg();
+$templateMsg = $weapp->getTemplateMsg();
   
 //1.获取小程序模板库标题列表
 $res_array = $templateMsg->getListFromLib($offset,$count);
@@ -41,7 +41,7 @@ $res_array = $templateMsg->send($touser,$template_id,$form_id,$data);
 2.2.1 客服消息相关接口
 ```php
 //从‘小程序’获取一个‘客服消息’单例对象
-$customMsg = $weapp.getCustomMsg();
+$customMsg = $weapp->getCustomMsg();
   
 //1.发送客服消息 (微信对调用时机和次数都有限制，详情见微信文档)
 $res_array = $customMsg->send($touser,$msgtype,$content_array);
@@ -56,7 +56,7 @@ $res_array = $customMsg->send($touser,$msgtype,$content_array);
 2.3 二维码相关接口
 ```php
 //从‘小程序’获取一个‘二维码’单例对象
-$qrcode = $weapp.getQRCode();
+$qrcode = $weapp->getQRCode();
   
 //1.获取小程序A码
 $res_array = $qrcode->getQRCodeA($path,$width=null,$auto_color=null,$line_color=null);
@@ -72,7 +72,7 @@ $res_array = $qrcode->getQRCodeC($path,$width=null);
 2.4 数据统计相关接口
 ```php
 //从‘小程序’获取一个‘数据统计’单例对象
-$statistic = $weapp.getStatistic();
+$statistic = $weapp->getStatistic();
   
 //1.获取每日数据概况趋势
 $res_array = $statistic->getAbout($date);
