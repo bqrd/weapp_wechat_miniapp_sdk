@@ -25,6 +25,6 @@ class WeApp extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return WeApp::class;
+        return OpenApiWeApp::class;
     }
 }
