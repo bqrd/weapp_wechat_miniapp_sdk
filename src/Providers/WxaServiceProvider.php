@@ -23,6 +23,15 @@ class WxaServiceProvider extends ServiceProvider
      */
     protected $defer = true;
 
+    public function boot()
+    {
+        if (strpos($this->app->version(), 'Lumen') !== false) {
+            $this->publishes([
+                __DIR__.'/../config/weapp.php' => config_path('weapp.php')
+            ], 'config');
+        }
+    }
+
     /**
      * register.
      *
@@ -40,11 +49,8 @@ class WxaServiceProvider extends ServiceProvider
                 return new WeApp($config['appId'], $config['appSecret']);
             });
         } else {
-            $this->publishes([
-                __DIR__.'/../config/weapp.php' => config_path('weapp.php')
-            ], 'config');
             $this->app->singleton(WeApp::class, function ($app) {
-                return new WeApp(config('appId'), config('appSecret'));
+                return new WeApp(config('weapp.appId'), config('weapp.appSecret'));
             });
         }
     }
