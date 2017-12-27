@@ -110,8 +110,8 @@ class BaseApi
         }
         $ch = curl_init($url.$url_param);
         curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, 'CURLOPT_CONNECTTIMEOUT', 10);
-        curl_setopt($ch, 'CURLOPT_TIMEOUT', 60);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($is_post) {
             curl_setopt($ch, CURLOPT_POST, 1);
