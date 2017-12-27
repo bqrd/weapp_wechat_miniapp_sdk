@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Facades;
+namespace Bqrd\WeAppSdk\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -24,6 +24,6 @@ class WeApp extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return \Bqrd\OpenApi\WeApp::class;
+        return \Bqrd\WeAppSdk\WeApp::class;
     }
 }

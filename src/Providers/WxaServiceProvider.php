@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Providers;
+namespace Bqrd\WeAppSdk\Providers;
 
-use Bqrd\OpenApi\WeApp;
+use Bqrd\WeAppSdk\WeApp;
 use Illuminate\Support\ServiceProvider;
 
 class WxaServiceProvider extends ServiceProvider

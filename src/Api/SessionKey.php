@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Api;
+namespace Bqrd\WeAppSdk\Api;
 
 class SessionKey extends BaseApi
 {

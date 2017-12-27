@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi;
+namespace Bqrd\WeAppSdk;
 
-use Bqrd\OpenApi\Api\CustomMsg;
-use Bqrd\OpenApi\Api\QRCode;
-use Bqrd\OpenApi\Api\SessionKey;
-use Bqrd\OpenApi\Api\Statistic;
-use Bqrd\OpenApi\Api\TemplateMsg;
+use Bqrd\WeAppSdk\Api\CustomMsg;
+use Bqrd\WeAppSdk\Api\QRCode;
+use Bqrd\WeAppSdk\Api\SessionKey;
+use Bqrd\WeAppSdk\Api\Statistic;
+use Bqrd\WeAppSdk\Api\TemplateMsg;
 
 class WeApp
 {
