@@ -23,15 +23,6 @@ class WxaServiceProvider extends ServiceProvider
      */
     protected $defer = true;
 
-    public function boot()
-    {
-        if (strpos($this->app->version(), 'Lumen') !== false) {
-            $this->publishes([
-                __DIR__.'/../config/weapp.php' => config_path('weapp.php')
-            ], 'config');
-        }
-    }
-
     /**
      * register.
      *
