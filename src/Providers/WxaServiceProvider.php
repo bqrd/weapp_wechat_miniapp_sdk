@@ -32,12 +32,21 @@ class WxaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(WeApp::class, function ($app) {
-            $app->configure('openapi-wechat-miniapp-sdk');
-            $config = $app->make('config')->get('openapi-wechat-miniapp-sdk');
+        if (strpos($this->app->version(), 'Lumen') !== false) {
+            $this->app->singleton(WeApp::class, function ($app) {
+                $app->configure('weapp');
+                $config = $app->make('config')->get('weapp');
 
-            return new WeApp($config['appId'], $config['appSecret']);
-        });
+                return new WeApp($config['appId'], $config['appSecret']);
+            });
+        } else {
+            $this->publishes([
+                __DIR__.'/../config/weapp.php' => config_path('weapp.php')
+            ], 'config');
+            $this->app->singleton(WeApp::class, function ($app) {
+                return new WeApp(config('appId'), config('appSecret'));
+            });
+        }
     }
 
     /**
