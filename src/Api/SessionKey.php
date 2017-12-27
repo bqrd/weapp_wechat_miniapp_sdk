@@ -14,12 +14,10 @@ namespace Bqrd\OpenApi\Api;
 class SessionKey extends BaseApi
 {
     /**
-     * 使用code 换取 openid 和 session_key
-     * 
-     * @param mixed $code 
-     * 
-     * @access public
-     * 
+     * 使用code 换取 openid 和 session_key.
+     *
+     * @param mixed $code
+     *
      * @return mixed
      */
     public function get($code)

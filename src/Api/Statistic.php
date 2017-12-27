@@ -14,12 +14,10 @@ namespace Bqrd\OpenApi\Api;
 class Statistic extends BaseApi
 {
     /**
-     * getAbout 
-     * 
-     * @param mixed $date 
-     * 
-     * @access public
-     * 
+     * getAbout.
+     *
+     * @param mixed $date
+     *
      * @return mixed
      */
     public function getAbout($date)
@@ -34,12 +32,10 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getVisitDaily 
-     * 
-     * @param mixed $date 
-     * 
-     * @access public
-     * 
+     * getVisitDaily.
+     *
+     * @param mixed $date
+     *
      * @return mixed
      */
     public function getVisitDaily($date)
@@ -54,13 +50,11 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getVisitWeekly 
-     * 
-     * @param mixed $begin_date 
-     * @param mixed $end_date 
-     * 
-     * @access public
-     * 
+     * getVisitWeekly.
+     *
+     * @param mixed $begin_date
+     * @param mixed $end_date
+     *
      * @return mixed
      */
     public function getVisitWeekly($begin_date, $end_date)
@@ -75,13 +69,11 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getVisitMonthly 
-     * 
-     * @param mixed $begin_date 
-     * @param mixed $end_date 
-     * 
-     * @access public
-     * 
+     * getVisitMonthly.
+     *
+     * @param mixed $begin_date
+     * @param mixed $end_date
+     *
      * @return mixed
      */
     public function getVisitMonthly($begin_date, $end_date)
@@ -96,12 +88,10 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getDistribution 
-     * 
-     * @param mixed $date 
-     * 
-     * @access public
-     * 
+     * getDistribution.
+     *
+     * @param mixed $date
+     *
      * @return mixed
      */
     public function getDistribution($date)
@@ -116,12 +106,10 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getRetainDaily 
-     * 
-     * @param mixed $date 
-     * 
-     * @access public
-     * 
+     * getRetainDaily.
+     *
+     * @param mixed $date
+     *
      * @return mixed
      */
     public function getRetainDaily($date)
@@ -136,13 +124,11 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getRetainWeekly 
-     * 
-     * @param mixed $begin_date 
-     * @param mixed $end_date 
-     * 
-     * @access public
-     * 
+     * getRetainWeekly.
+     *
+     * @param mixed $begin_date
+     * @param mixed $end_date
+     *
      * @return mixed
      */
     public function getRetainWeekly($begin_date, $end_date)
@@ -157,13 +143,11 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getRetainMonthly 
-     * 
-     * @param mixed $begin_date 
-     * @param mixed $end_date 
-     * 
-     * @access public
-     * 
+     * getRetainMonthly.
+     *
+     * @param mixed $begin_date
+     * @param mixed $end_date
+     *
      * @return mixed
      */
     public function getRetainMonthly($begin_date, $end_date)
@@ -178,12 +162,10 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getPage 
-     * 
-     * @param mixed $date 
-     * 
-     * @access public
-     * 
+     * getPage.
+     *
+     * @param mixed $date
+     *
      * @return mixed
      */
     public function getPage($date)
@@ -198,13 +180,11 @@ class Statistic extends BaseApi
     }
 
     /**
-     * getUserFeature 
-     * 
-     * @param mixed $begin_date 
-     * @param mixed $end_date 
-     * 
-     * @access public
-     * 
+     * getUserFeature.
+     *
+     * @param mixed $begin_date
+     * @param mixed $end_date
+     *
      * @return mixed
      */
     public function getUserFeature($begin_date, $end_date)

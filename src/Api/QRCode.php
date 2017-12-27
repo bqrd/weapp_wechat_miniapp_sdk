@@ -14,15 +14,13 @@ namespace Bqrd\OpenApi\Api;
 class QRCode extends BaseApi
 {
     /**
-     * getQRCodeA 
-     * 
-     * @param mixed $path 
-     * @param mixed $width 
-     * @param mixed $auto_color 
-     * @param mixed $line_color 
-     * 
-     * @access public
-     * 
+     * getQRCodeA.
+     *
+     * @param mixed $path
+     * @param mixed $width
+     * @param mixed $auto_color
+     * @param mixed $line_color
+     *
      * @return mixed
      */
     public function getQRCodeA($path, $width = null, $auto_color = null, $line_color = null)
@@ -39,16 +37,14 @@ class QRCode extends BaseApi
     }
 
     /**
-     * getQRCodeB 
-     * 
-     * @param mixed $scene 
-     * @param mixed $page 
-     * @param mixed $width 
-     * @param mixed $auto_color 
-     * @param mixed $line_color 
-     * 
-     * @access public
-     * 
+     * getQRCodeB.
+     *
+     * @param mixed $scene
+     * @param mixed $page
+     * @param mixed $width
+     * @param mixed $auto_color
+     * @param mixed $line_color
+     *
      * @return mixed
      */
     public function getQRCodeB($scene, $page, $width = null, $auto_color = null, $line_color = null)
@@ -66,13 +62,11 @@ class QRCode extends BaseApi
     }
 
     /**
-     * getQRCodeC 
-     * 
-     * @param mixed $path 
-     * @param mixed $width 
-     * 
-     * @access public
-     * 
+     * getQRCodeC.
+     *
+     * @param mixed $path
+     * @param mixed $width
+     *
      * @return mixed
      */
     public function getQRCodeC($path, $width = null)

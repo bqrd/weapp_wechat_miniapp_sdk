@@ -16,28 +16,24 @@ use Cache;
 class BaseApi
 {
     /**
-     * appid 
-     * 
+     * appid.
+     *
      * @var mixed
-     * @access protected
      */
     protected $appid;
     /**
-     * secret 
-     * 
+     * secret.
+     *
      * @var mixed
-     * @access protected
      */
     protected $secret;
 
     /**
-     * __construct 
-     * 
-     * @param mixed $appid 
-     * @param mixed $secret 
-     * 
-     * @access public
-     * 
+     * __construct.
+     *
+     * @param mixed $appid
+     * @param mixed $secret
+     *
      * @return mixed
      */
     public function __construct($appid, $secret)
@@ -47,11 +43,10 @@ class BaseApi
     }
 
     /**
-     * getAccessToken 
-     * 
-     * 
-     * @access public
-     * 
+     * getAccessToken.
+     *
+     *
+     *
      * @return mixed
      */
     public function getAccessToken()
@@ -78,14 +73,12 @@ class BaseApi
     }
 
     /**
-     * sendRequestWithToken 
-     * 
-     * @param mixed $url 
-     * @param mixed $body_param 
-     * @param mixed $is_post 
-     * 
-     * @access public
-     * 
+     * sendRequestWithToken.
+     *
+     * @param mixed $url
+     * @param mixed $body_param
+     * @param mixed $is_post
+     *
      * @return mixed
      */
     public function sendRequestWithToken($url, $body_param = null, $is_post = true)
@@ -117,8 +110,8 @@ class BaseApi
         }
         $ch = curl_init($url.$url_param);
         curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, 'CURLOPT_CONNECTTIMEOUT', 10)
-        curl_setopt($ch, 'CURLOPT_TIMEOUT', 60)
+        curl_setopt($ch, 'CURLOPT_CONNECTTIMEOUT', 10);
+        curl_setopt($ch, 'CURLOPT_TIMEOUT', 60);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($is_post) {
             curl_setopt($ch, CURLOPT_POST, 1);

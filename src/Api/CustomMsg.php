@@ -14,14 +14,12 @@ namespace Bqrd\OpenApi\Api;
 class CustomMsg extends BaseApi
 {
     /**
-     * send 
-     * 
-     * @param mixed $touser 
-     * @param mixed $msgtype 
-     * @param mixed $content_array 
-     * 
-     * @access public
-     * 
+     * send.
+     *
+     * @param mixed $touser
+     * @param mixed $msgtype
+     * @param mixed $content_array
+     *
      * @return mixed
      */
     public function send($touser, $msgtype, $content_array)

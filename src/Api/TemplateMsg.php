@@ -14,13 +14,11 @@ namespace Bqrd\OpenApi\Api;
 class TemplateMsg extends BaseApi
 {
     /**
-     * getListFromLib 
-     * 
-     * @param mixed $offset 
-     * @param mixed $count 
-     * 
-     * @access public
-     * 
+     * getListFromLib.
+     *
+     * @param mixed $offset
+     * @param mixed $count
+     *
      * @return mixed
      */
     public function getListFromLib($offset, $count)
@@ -35,12 +33,10 @@ class TemplateMsg extends BaseApi
     }
 
     /**
-     * getTempFromLib 
-     * 
-     * @param mixed $id 
-     * 
-     * @access public
-     * 
+     * getTempFromLib.
+     *
+     * @param mixed $id
+     *
      * @return mixed
      */
     public function getTempFromLib($id)
@@ -54,13 +50,11 @@ class TemplateMsg extends BaseApi
     }
 
     /**
-     * add 
-     * 
-     * @param mixed $id 
-     * @param mixed $keyword_id_array 
-     * 
-     * @access public
-     * 
+     * add.
+     *
+     * @param mixed $id
+     * @param mixed $keyword_id_array
+     *
      * @return mixed
      */
     public function add($id, $keyword_id_array)
@@ -75,13 +69,11 @@ class TemplateMsg extends BaseApi
     }
 
     /**
-     * getList 
-     * 
-     * @param mixed $offset 
-     * @param mixed $count 
-     * 
-     * @access public
-     * 
+     * getList.
+     *
+     * @param mixed $offset
+     * @param mixed $count
+     *
      * @return mixed
      */
     public function getList($offset, $count)
@@ -96,12 +88,10 @@ class TemplateMsg extends BaseApi
     }
 
     /**
-     * del 
-     * 
-     * @param mixed $template_id 
-     * 
-     * @access public
-     * 
+     * del.
+     *
+     * @param mixed $template_id
+     *
      * @return mixed
      */
     public function del($template_id)
@@ -115,18 +105,16 @@ class TemplateMsg extends BaseApi
     }
 
     /**
-     * send 
-     * 
-     * @param mixed $touser 
-     * @param mixed $template_id 
-     * @param mixed $form_id 
-     * @param mixed $data 
-     * @param mixed $page 
-     * @param mixed $color 
-     * @param mixed $emphasis_keyword 
-     * 
-     * @access public
-     * 
+     * send.
+     *
+     * @param mixed $touser
+     * @param mixed $template_id
+     * @param mixed $form_id
+     * @param mixed $data
+     * @param mixed $page
+     * @param mixed $color
+     * @param mixed $emphasis_keyword
+     *
      * @return mixed
      */
     public function send($touser, $template_id, $form_id, $data, $page = null, $color = null, $emphasis_keyword = null)
