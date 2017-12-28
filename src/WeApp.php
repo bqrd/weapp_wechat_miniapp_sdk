@@ -125,7 +125,7 @@ class WeApp
      *
      * @return mixed
      */
-    public function decrypt(string $str = '', string $sessionKey = '', string $iv = '')
+    public function decrypt(string $str = '', string $sessionKey = '', string $iv = '') : array
     {
         if (strlen($sessionKey) != 24) {
             throw new WeAppException('IllegalSessionKey');
@@ -142,15 +142,15 @@ class WeApp
 
         $result = openssl_decrypt($aesCipher, 'AES-128-CBC', $aesKey, 1, $aesIV);
 
-        $dataObj = json_decode($result);
+        $dataObj = json_decode($result, true);
         if (json_last_error() != JSON_ERROR_NONE) {
             throw new WeAppException('IllegalBuffer' . json_last_error_msg());
         }
 
-        if ($dataObj->watermark->appid != $this->appid) {
+        if ($dataObj['watermark']['appid'] != $this->appid) {
             throw new WeAppException('IllegalBuffer');
         }
 
-        return $result;
+        return $dataObj;
     }
 }
