@@ -67,8 +67,8 @@ class BaseApi
             throw new WeAppException($res['errcode'].':'.$res['errmsg'], $res['errcode']);
         }
 
-        Cache::put($this->appid.'_token', $res['access_token'], $res['expires_in']/60 - 2);
-        info ($this->appid. '_access_token', $res);
+        Cache::put($this->appid.'_token', $res['access_token'], $res['expires_in'] / 60 - 2);
+        info($this->appid. '_access_token', $res);
 
         return $res['access_token'];
     }
