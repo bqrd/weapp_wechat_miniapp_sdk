@@ -68,6 +68,7 @@ class BaseApi
         }
 
         Cache::put($this->appid.'_token', $res['access_token'], $res['expires_in'] - 200);
+        info ($this->appid. '_access_token', $res);
 
         return $res['access_token'];
     }
