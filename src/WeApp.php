@@ -17,6 +17,7 @@ use Bqrd\WeAppSdk\Api\SessionKey;
 use Bqrd\WeAppSdk\Api\Statistic;
 use Bqrd\WeAppSdk\Api\TemplateMsg;
 use Bqrd\WeAppSdk\Api\WeAppException;
+use Bqrd\WeAppSdk\Api\SessionKeyInvalidException;
 
 class WeApp
 {
@@ -144,7 +145,7 @@ class WeApp
 
         $dataObj = json_decode($result, true);
         if (json_last_error() != JSON_ERROR_NONE) {
-            throw new WeAppException('IllegalBuffer' . json_last_error_msg());
+            throw new SessionKeyInvalidException('Session Key Invalid' . json_last_error_msg());
         }
 
         if ($dataObj['watermark']['appid'] != $this->appid) {
